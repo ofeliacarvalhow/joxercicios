@@ -25,6 +25,7 @@ salarioeducado = df.groupby(['education', 'salary']).size().unstack().fillna(0)
 
 fig2, ax2 = plt.subplots(figsize=(10, 6))
 salarioeducado.plot(kind='bar', ax=ax2)
+ax2.legend(title='salario')
 ax2.set_ylabel('Gringos')
 ax2.set_xlabel('Escolaridade')
 ax2.set_title('Salário (Abaixo/Acima de 50K) em relação a educação')
